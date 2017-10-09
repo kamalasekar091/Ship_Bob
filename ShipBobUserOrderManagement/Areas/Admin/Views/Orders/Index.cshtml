@@ -1,0 +1,86 @@
+﻿@model IEnumerable<ShipBobUserOrderManagement.Models.Order>
+@addTagHelper*,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Orders Index";
+}
+<!-- Page Content -->
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <h3 class="box-title">Orders</h3>
+            <!--
+                <a asp-area="Admin" asp-controller="Orders" asp-action="Create" class="btn btn-success">
+                <span class="btn btn-label"><i class="fa fa-check"></i></span>Create New Order
+            </a>
+            -->
+        </div>
+    </div>
+</div>
+
+<!-- .row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="white-box">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="white-box">
+                        <h3 class="box-title">Order List</h3>
+                        <div class="table-responsive">
+                            <table class="table product-overview">
+                                <thead>
+                                    <tr>
+                                        <th>Order Name</th>
+                                        <th>Tracking ID</th>
+                                        <th>Street Addesss</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Zip Code</th>
+                                        <th>ID</th>
+                                        <th>User ID</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ord in Model)
+                                    {
+
+
+
+                                        <tr>
+                                            <td>@ord.Name</td>
+                                            <td>@ord.TrackingID</td>
+                                            <td>@ord.StreetAddress</td>
+                                            <td>@ord.City</td>
+                                            <td>@ord.State</td>
+                                            <td>@ord.ZipCode</td>
+                                            <td>@ord.Id</td>
+                                            <td>@ord.UserId</td>
+
+                                            <td>
+
+                                                <a asp-area="Admin" asp-controller="Orders" asp-action="Update" asp-route-id="@ord.Id" class="text-inverse p-r-10" data-toggle="tooltip" title="" data-original-title="Edit"><i class="glyphicon glyphicon-edit"></i></a>
+                                                <a asp-area="Admin" asp-controller="Orders" asp-action="Delete" asp-route-id="@ord.Id" class="text-inverse" title="" data-toggle="tooltip" data-original-title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
+                                            </td>
+
+                                        </tr>
+
+                                    }
+                                    
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<!-- /#page-wrapper -->

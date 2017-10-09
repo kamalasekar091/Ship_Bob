@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/animate.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/default.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" media="all">
+</head>
+<body class="fix-header fix-sidebar">
+    <div id="wrapper">
+        @Html.Partial("AdminPartials/_TopMenu")
+        @Html.Partial("AdminPartials/_Sidebar")
+        <div id="page-wrapper" style="min-height:600px">
+            <div class="container-fluid">
+                @RenderBody()
+                <hr />
+                <footer class="footer text-center">Ship Bob Coding Challenge</footer>
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("scripts",required:false)
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script src="~/js/sidebar-nav.min.js"></script>
+    
+   
+    
+    
+    
+    
+</body>
+</html>

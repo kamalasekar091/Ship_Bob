@@ -1,0 +1,56 @@
+﻿@model ShipBobUserOrderManagement.Models.User
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Create User";
+}
+
+<div class="row m-t-30">
+    <div class="col-md-12">
+
+        <div class="panel panel-info">
+            <div class="panel-heading"> Create User</div>
+            <div class="panel-wrapper" aria-expanded="true">
+                <div class="panel-body">
+                    <form asp-area="Admin" asp-controller="Users" asp-action="Create" method="post" >
+                        <div class="form-body">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">First Name</label>
+                                        <input asp-for="FirstName" type="text" id="firstName" class="form-control">
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Last Name</label>
+                                        <input asp-for="LastName" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <!--/row-->
+                            <hr>
+                        </div>
+                        <div class="form-actions m-t-30">
+                            <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                            <button type="button" class="btn btn-default">Cancel</button>
+                        </div>
+                    </form>
+                    <div asp-validation-summary="All"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

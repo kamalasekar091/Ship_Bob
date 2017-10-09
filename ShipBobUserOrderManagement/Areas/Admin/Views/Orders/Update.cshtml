@@ -1,0 +1,116 @@
+﻿@model ShipBobUserOrderManagement.Models.Order
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Update  Orders";
+}
+
+<div class="row m-t-30">
+    <div class="col-md-12">
+
+        <div class="panel panel-info">
+            <div class="panel-heading"> Create User</div>
+            <div class="panel-wrapper" aria-expanded="true">
+                <div class="panel-body">
+                    <form asp-area="Admin" asp-controller="Orders" asp-action="Update" method="post">
+                        <div class="form-body">
+
+                            <input asp-for="Id" type="hidden" />
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Name</label>
+                                        <input asp-for="Name" type="text" id="firstName" class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <input asp-for="UserId" type="hidden" />
+                           <!-- <div class="row" type="hidden">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">User ID</label>
+                                        <input asp-for="UserId" type="hidden" id="firstName" class="form-control">
+                                    </div>
+                                </div>
+
+                            </div> -->
+
+
+                            <!--/row-->
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Tracking Id</label>
+                                        <input asp-for="TrackingID" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Street Address</label>
+                                        <input asp-for="StreetAddress" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">City</label>
+                                        <input asp-for="City" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">State</label>
+                                        <input asp-for="State" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">ZipCode</label>
+                                        <input asp-for="ZipCode" type="text" id="lastName" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--/span-->
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <!--/row-->
+                        <hr>
+
+
+                        <div class="form-actions m-t-30">
+                            <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Update</button>
+                            <button type="button" class="btn btn-default">Cancel</button>
+                        </div>
+
+                    </form>
+                    <div asp-validation-summary="All"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
